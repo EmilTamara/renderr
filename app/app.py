@@ -4,7 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import streamlit as st
 
-df = pd.read_csv("C:/Users/emilj/OneDrive/proyectos data/vehicles_us.csv", na_values=['None', 'NA', 'NULL', ''],
+df = pd.read_csv("data/vehicles_us.csv", na_values=['None', 'NA', 'NULL', ''],
                  keep_default_na=True, encoding='utf-8', on_bad_lines='skip', decimal='.', parse_dates=['date_posted'])
 
 df['model_year'] = pd.to_numeric(df['model_year'], errors='coerce').fillna(0).astype(int)
